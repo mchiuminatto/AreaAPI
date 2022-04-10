@@ -5,7 +5,6 @@ import psycopg2
 import psycopg2.extras
 import configparser
 
-
 class DBServices:
     def __init__(self, config_file):
 
@@ -16,11 +15,7 @@ class DBServices:
 
         config = configparser.ConfigParser()
 
-        _data_path = str(__file__)
-
-        self.db_file = _data_path.replace("DataServicesPGSQL2.py", "")
-
-        configFilePath =  self.db_file  + config_file
+        configFilePath =  config_file
 
 
 
